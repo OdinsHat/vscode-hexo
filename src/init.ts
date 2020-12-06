@@ -13,7 +13,7 @@ export default function () {
     if (packageExists()) {
         Messages.alreadyExistsError();
         return;
-    }  
+    }
     Window.showInputBox({
         prompt: 'Initializes a website',
         placeHolder: '[folder]'

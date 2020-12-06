@@ -13,6 +13,7 @@ import {hexoServer,hexoStopServer} from './server';
 import hexoDeploy from './deploy';
 import hexoPublish from './publish';
 import hexoClean from './clean';
+import hexoVersion from './version';
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export const activate = function (context: ExtensionContext) {
@@ -32,7 +33,8 @@ export const activate = function (context: ExtensionContext) {
         Commands.registerCommand('hexo-script.stop', hexoStopServer),
         Commands.registerCommand('hexo-script.deploy', hexoDeploy),  
         Commands.registerCommand('hexo-script.publish', hexoPublish),
-        Commands.registerCommand('hexo-script.clean', hexoClean) 
+        Commands.registerCommand('hexo-script.clean', hexoClean),
+        Commands.registerCommand('hexo-script.clean', hexoVersion)
     ];
     
 	context.subscriptions.push(...disposables, outputChannel);
