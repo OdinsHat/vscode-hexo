@@ -19,7 +19,8 @@
     "onCommand:hexo-script.stop",
     "onCommand:hexo-script.deploy",
     "onCommand:hexo-script.publish",
-    "onCommand:hexo-script.clean"
+    "onCommand:hexo-script.clean",
+    "onCommand:hexo-script.version"
   ],
   "main": "./out/src/extension",
   "contributes": {
@@ -62,6 +63,11 @@
       {
         "command": "hexo-script.clean",
         "title": "hexo clean",
+        "category": "hexo"
+      },
+      {
+        "command": "hexo-script.version",
+        "title": "hexo version",
         "category": "hexo"
       }
     ]
