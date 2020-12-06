@@ -4,7 +4,9 @@ import { packageExists } from './utils';
 import * as Messages from './messages';
 import { ChildProcess, exec } from 'child_process';
 
-
+/**
+ * Print version information from hexo version command
+ */
 export function hexoVersion() {
     if (!Workspace.rootPath) {
         Messages.noDirectoryOpenError();
@@ -12,5 +14,5 @@ export function hexoVersion() {
     }
 
     let version = exec(["hexo", 'version']);
-    vscode.window.showInformationMessage(v);
+    vscode.window.showInformationMessage(version);
 };
