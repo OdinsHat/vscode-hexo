@@ -34,7 +34,7 @@ export const activate = function (context: ExtensionContext) {
         Commands.registerCommand('hexo-script.deploy', hexoDeploy),  
         Commands.registerCommand('hexo-script.publish', hexoPublish),
         Commands.registerCommand('hexo-script.clean', hexoClean),
-        Commands.registerCommand('hexo-script.clean', hexoVersion)
+        Commands.registerCommand('hexo-script.version', hexoVersion)
     ];
     
 	context.subscriptions.push(...disposables, outputChannel);
